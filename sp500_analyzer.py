@@ -13,7 +13,7 @@ from datetime import timedelta
 print("Fetching latest stock data...")
 df = pd.read_csv("S&P 500 Project - Sheet1 copy.csv")
 tickers = df["Symbol"].tolist()
-new_data = yf.download(tickers, period="5y", auto_adjust=True)["Close"]
+new_data = yf.download(tickers, period="2y", auto_adjust=True)["Close"]
 new_data.to_csv("s&p.csv")
 print("Data updated!")
 
@@ -101,4 +101,4 @@ def lstm_predict(ticker, days_forward=90):
     print(f"Predicted Price in {days_forward} trading days: ${final_price:.2f}")
     print(f"Predicted Change: {pct_change:.2f}%")
 
-lstm_predict("NVDA")
+lstm_predict("AAPL")
