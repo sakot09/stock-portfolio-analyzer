@@ -9,7 +9,8 @@ Generates a chart showing historical prices and the forward forecast
 Prints a summary showing current price, predicted price, and projected % change
 
 How It Works
-The model looks at 120 trading days of price history at a time and learns patterns in how prices move. It uses recursive forecasting — each predicted day feeds into the next prediction — to generate a full 90-day outlook. The model is retrained on the latest data every time it runs, so forecasts are always current.
+The model looks at 120 trading days of price history at a time and learns patterns in how prices move. It uses recursive forecasting (each predicted day feeds into the next prediction) to generate a full 90-day outlook. The model is retrained on the latest data every time it runs, so forecasts are always current.
+
 Tech Stack
 
 Python
@@ -52,9 +53,9 @@ Predicted Price in 90 trading days: $228.17
 Predicted Change: +6.88%
 Limitations
 
-Stock markets are inherently unpredictable — this model is for educational purposes and should not be used as financial advice
+Stock markets are inherently unpredictable.This model is for educational purposes and should not be used as financial advice
 LSTM forecasts based purely on price history do not account for news, earnings, or macroeconomic events
-Recursive forecasting compounds prediction error over time — shorter forecasts are more reliable than longer ones
+Recursive forecasting compounds prediction error over time. Shorter forecasts are more reliable than longer ones
 
 What I Learned
 
