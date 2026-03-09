@@ -1,5 +1,7 @@
 S&P 500 LSTM Stock Price Forecaster
+
 A Python tool that trains a Long Short-Term Memory (LSTM) neural network on historical price data for all 503 S&P 500 companies and generates 90-day forward price forecasts.
+
 What It Does
 
 Automatically downloads up-to-date historical price data for all S&P 500 companies
@@ -8,17 +10,24 @@ Predicts the next 90 trading days of price movement for any stock
 Generates a chart showing historical prices and the forward forecast
 Prints a summary showing current price, predicted price, and projected % change
 
+
 How It Works
+
 The model looks at 120 trading days of price history at a time and learns patterns in how prices move. It uses recursive forecasting (each predicted day feeds into the next prediction) to generate a full 90-day outlook. The model is retrained on the latest data every time it runs, so forecasts are always current.
 
 Tech Stack
 
 Python
 TensorFlow / Keras — LSTM neural network
+
 yfinance — real-time stock data
+
 pandas — data manipulation
+
 NumPy — numerical computing
+
 scikit-learn — data preprocessing
+
 Matplotlib — data visualization
 
 Setup
